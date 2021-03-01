@@ -12,8 +12,8 @@ class my_json:
     def get_user(self):
         for info in self.json_user:
             name = '{} {} {}'.format(info['name']['title'],
-                                    info['name']['first'],
-                                    info['name']['last'])
+                                     info['name']['first'],
+                                     info['name']['last'])
             age = info['dob']['age']
             country = info['location']['country']
 
