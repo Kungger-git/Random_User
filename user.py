@@ -28,11 +28,11 @@ class Record_User_Data:
         self.username = username
 
     def write_user(self):
-        with open('user.csv', 'a', encoding='utf-8') as f:
+        with open('users.csv', 'a', encoding='utf-8') as f:
             writer = csv.writer(f, dialect='excel')
 
             for dict in self.source:
-                df = pd.read_csv('user.csv', encoding='utf-8', delimiter=',')
+                df = pd.read_csv('users.csv', encoding='utf-8', delimiter=',')
                 data = [len([list(row) for row in df.values]),
                         random.randint(10000, 99999), self.username]
                 data.extend((dict['dob']['age'], dict['gender'].capitalize()))
@@ -60,7 +60,7 @@ class Get_Users:
 
     def random_user_api(self):
         try:
-            with open('user.csv', 'w', encoding='utf-8') as f:
+            with open('users.csv', 'w', encoding='utf-8') as f:
                 headers = ['#', 'ID', 'Name', 'Age', 'Gender', 'City',
                            'State', 'Country', 'Email', 'Phone', 'Username', 'Password']
                 wr = csv.writer(f, dialect='excel')
