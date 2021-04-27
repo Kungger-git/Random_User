@@ -1,0 +1,17 @@
+{
+  "view": [
+    {
+      "#": false,
+      "Name": true,
+      "Age": false,
+      "Gender": false,
+      "City": false,
+      "State": false,
+      "Country": false,
+      "Email": true,
+      "Phone": false,
+      "Username": true,
+      "Password": true
+    }
+  ]
+}
